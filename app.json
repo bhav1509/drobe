@@ -13,17 +13,28 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bhavnam.drobe",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "drobe needs access to your photo library so you can pick pictures of your clothes.",
+        "NSCameraUsageDescription": "drobe needs camera access so you can take pictures of your clothes.",
+        "NSPhotoLibraryAddUsageDescription": "drobe may save processed images to your photo library."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.bhavnam.drobe"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "scheme": "drobe",
+    "plugins": [
+      "expo-sqlite"
+    ]
   }
 }
