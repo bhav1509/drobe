@@ -11,7 +11,7 @@
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		849A89532ED52B9AD4731252 /* libPods-drobe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B965CF6CE6C310C3BB346C /* libPods-drobe.a */; };
 		AA2721E28C2480CBAE18BAB5 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C93B5CC3EE76139E714D2 /* ExpoModulesProvider.swift */; };
-		B89BDFDA2E66CC9000C4599C /* BackgroundRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89BDFD92E66CC8500C4599C /* BackgroundRemover.swift */; };
+		B89BDFE02E6C2A8F00C4599C /* BackgroundRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89BDFDF2E6C2A8600C4599C /* BackgroundRemover.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		D528BC5F9C2B6A71AC0AAB38 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1EA1328422023A11DE3F05C6 /* PrivacyInfo.xcprivacy */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 		6E3C93B5CC3EE76139E714D2 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-drobe/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		96B69388D899497763920172 /* Pods-drobe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drobe.release.xcconfig"; path = "Target Support Files/Pods-drobe/Pods-drobe.release.xcconfig"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = drobe/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B89BDFD92E66CC8500C4599C /* BackgroundRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRemover.swift; sourceTree = "<group>"; };
+		B89BDFDF2E6C2A8600C4599C /* BackgroundRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRemover.swift; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		E26520734B66AC7D9EFAF3F4 /* Pods-drobe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drobe.debug.xcconfig"; path = "Target Support Files/Pods-drobe/Pods-drobe.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -48,7 +48,7 @@
 		13B07FAE1A68108700A75B9A /* drobe */ = {
 			isa = PBXGroup;
 			children = (
-				B89BDFD92E66CC8500C4599C /* BackgroundRemover.swift */,
+				B89BDFDF2E6C2A8600C4599C /* BackgroundRemover.swift */,
 				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -323,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B89BDFDA2E66CC9000C4599C /* BackgroundRemover.swift in Sources */,
+				B89BDFE02E6C2A8F00C4599C /* BackgroundRemover.swift in Sources */,
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
 				AA2721E28C2480CBAE18BAB5 /* ExpoModulesProvider.swift in Sources */,
 			);

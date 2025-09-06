@@ -5,20 +5,18 @@ import UIKit
 
 public class BackgroundRemoverModule: Module {
   public func definition() -> ModuleDefinition {
-    Name("BackgroundRemover")  // <-- JS name must match
+    Name("BackgroundRemover")  
 
-    // Tiny sync method so we can test registration easily from JS
     Function("ping") {
       return "pong"
     }
 
-    // Main function
     AsyncFunction("removeBackground") { (uri: String) -> String in
       guard let url = URL(string: uri), url.isFileURL else {
-        throw Exception(name: "bad_uri", description: "Invalid file URI")
+        throw Exception(name: "bad_uri", reason: "Invalid file URI")
       }
       guard let input = CIImage(contentsOf: url) else {
-        throw Exception(name: "load_error", description: "Could not load image")
+        throw Exception(name: "load_error", reason: "Could not load image")
       }
 
       let req = VNGeneratePersonSegmentationRequest()
@@ -29,7 +27,7 @@ public class BackgroundRemoverModule: Module {
       try handler.perform([req])
 
       guard let obs = req.results?.first as? VNPixelBufferObservation else {
-        throw Exception(name: "no_mask", description: "No person mask produced")
+        throw Exception(name: "no_mask", reason: "No person mask produced")
       }
       let maskCI = CIImage(cvPixelBuffer: obs.pixelBuffer)
 
@@ -45,11 +43,11 @@ public class BackgroundRemoverModule: Module {
 
       let ctx = CIContext()
       guard let cg = ctx.createCGImage(output, from: input.extent) else {
-        throw Exception(name: "render_error", description: "Could not render output")
+        throw Exception(name: "render_error", reason: "Could not render output")
       }
       let ui = UIImage(cgImage: cg)
       guard let png = ui.pngData() else {
-        throw Exception(name: "encode_error", description: "Could not encode PNG")
+        throw Exception(name: "encode_error", reason: "Could not encode PNG")
       }
 
       let outURL = FileManager.default.temporaryDirectory
